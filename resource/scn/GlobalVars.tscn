@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://de4akrwfdj60h"]
+
+[ext_resource type="Script" path="res://source//GlobalVars.cs" id="1_t5rgr"]
+
+[node name="GlobalVars" type="Node2D"]
+script = ExtResource("1_t5rgr")

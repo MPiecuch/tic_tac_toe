@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://cm6tcncui53oa"]
+
+[ext_resource type="Texture2D" uid="uid://bx4srypibuxdy" path="res://resource/img/board.png" id="1_fm1j5"]
+[ext_resource type="Script" path="res://source/Start.cs" id="1_j0csp"]
+[ext_resource type="Texture2D" uid="uid://chp1goveddo83" path="res://resource/img/cross.png" id="3_dg5ig"]
+[ext_resource type="Texture2D" uid="uid://bf53g76rrqfj0" path="res://resource/img/circle_selected.png" id="3_hyykg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jotf"]
+bg_color = Color(0.666667, 0.333333, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj458"]
+bg_color = Color(0.666667, 0.333333, 1, 1)
+
+[sub_resource type="Theme" id="Theme_y36a1"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_7jotf")
+Button/styles/normal = SubResource("StyleBoxFlat_uj458")
+
+[node name="StartRoot" type="Node2D"]
+script = ExtResource("1_j0csp")
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(640, 384)
+texture = ExtResource("1_fm1j5")
+
+[node name="CircleBtn" type="TextureButton" parent="."]
+offset_left = 880.0
+offset_top = 300.0
+offset_right = 980.0
+offset_bottom = 400.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_hyykg")
+
+[node name="CrossBtn" type="TextureButton" parent="."]
+offset_left = 880.0
+offset_top = 350.0
+offset_right = 980.0
+offset_bottom = 450.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_dg5ig")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 860.0
+offset_top = 250.0
+offset_right = 949.0
+offset_bottom = 292.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Player
+"
+
+[node name="StartBtn" type="Button" parent="."]
+offset_left = 866.0
+offset_top = 420.0
+offset_right = 945.0
+offset_bottom = 470.0
+theme = SubResource("Theme_y36a1")
+theme_override_font_sizes/font_size = 30
+text = "Start"
